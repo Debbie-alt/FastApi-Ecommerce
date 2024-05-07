@@ -3,15 +3,12 @@ import { Input } from "@/components/ui/input"
 import { FaCartShopping } from "react-icons/fa6";
 import { BsSearch } from "react-icons/bs";
 import Link from 'next/link'
-import { MdDarkMode } from "react-icons/md";
-
-
-
+import { ModeToggle } from "./ModeToggler";
 
 
 const Navbar = () => {
   return (
-    <nav className="w-screen container flex justify-between items-center  border-2 border-b-slate-300 py-2">
+    <nav className="w-screen container flex justify-between items-center  border-b-2 border-b-slate-300 py-2">
       <div className="flex space-x-5 items-center">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
@@ -33,10 +30,10 @@ const Navbar = () => {
         
       <div className="flex space-x-3 items-center ">
        <FaCartShopping role="button" />
-       <Link href="/" className="hover:text-cyan-600">Cart</Link>
+       <Link href="/_cart" className="hover:text-cyan-600">Cart</Link>
+      <ModeToggle/>
        
       </div>
-
     </nav>
   );
 };
