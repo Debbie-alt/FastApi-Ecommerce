@@ -2,8 +2,8 @@ import ThemeProvider from "./ThemeProvider"
 
 export default function Layout({ children }) {
   return (
-    <html>
-      <body>
+    <div>
+      <div>
         <ThemeProvider
          attribute="class"
          defaultTheme="light"
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
          enablTransitionOnChange
         
         >{children}</ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </div>
   )
 }

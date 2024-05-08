@@ -1,10 +1,15 @@
 import Image from "next/image";
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
 import { FaCartShopping } from "react-icons/fa6";
 import { BsSearch } from "react-icons/bs";
-import Link from 'next/link'
+import Link from "next/link";
 import { ModeToggle } from "./ModeToggler";
-
+import { FaGlobe } from "react-icons/fa";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const Navbar = () => {
   return (
@@ -13,7 +18,7 @@ const Navbar = () => {
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/modamartlogo.png"
-          alt="Next.js Logo"
+          alt="Modamart Logo"
           width={55}
           height={37}
           priority
@@ -22,17 +27,31 @@ const Navbar = () => {
       </div>
 
       <div className="relative flex">
-      <Input/>
-      <div className="absolute  right-6  flex inset-y-0 items-center text-gray-600">
-        <BsSearch />
+        <Input />
+        <div className="absolute  right-6  flex inset-y-0 items-center text-gray-600">
+          <BsSearch />
+        </div>
       </div>
-      </div>
-        
-      <div className="flex space-x-3 items-center ">
-       <FaCartShopping role="button" />
-       <Link href="/_cart" className="hover:text-cyan-600">Cart</Link>
-      <ModeToggle/>
-       
+
+      <div className="flex space-x-5 items-center ">
+        <HoverCard>
+          <HoverCardTrigger>
+            {" "}
+            <FaGlobe className="text-cyan-500 text-lg cursor-pointer" />
+          </HoverCardTrigger>
+          <HoverCardContent>
+             <ul>
+               <li>English</li>
+               <li>Spanish</li>
+             </ul>
+           </HoverCardContent>
+        </HoverCard>
+
+        <FaCartShopping role="button" />
+        <Link href="/_cart" className="hover:text-cyan-600">
+          Cart
+        </Link>
+        <ModeToggle />
       </div>
     </nav>
   );

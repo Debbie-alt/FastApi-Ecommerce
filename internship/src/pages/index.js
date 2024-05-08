@@ -3,6 +3,7 @@ import Head from "next/head.js";
 import Navbar
  from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AllProducts from "@/components/AllProducts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
         </Head>
         <Navbar/>
         <Hero/>
+        <AllProducts/>
         
   
 
