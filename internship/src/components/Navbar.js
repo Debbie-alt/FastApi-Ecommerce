@@ -21,7 +21,7 @@ const Navbar = () => {
           alt="Modamart Logo"
           width={55}
           height={37}
-          priority
+          
         />
         <h1 className="font-semibold text-xl text-cyan-800">ModaMart</h1>
       </div>
@@ -47,6 +47,12 @@ const Navbar = () => {
            </HoverCardContent>
         </HoverCard>
 
+        <Link href="/" className="hover:text-cyan-600">
+          Home
+        </Link>
+        <Link href="/addproduct" className="hover:text-cyan-600">
+          Add Products
+        </Link>
         <FaCartShopping role="button" />
         <Link href="/_cart" className="hover:text-cyan-600">
           Cart

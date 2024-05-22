@@ -1,5 +1,4 @@
-
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -9,56 +8,61 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
 
-export  default function DialogCloseButton() {
+export default function DialogCloseButton({}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-         <button className='bg-gradient-to-r from-cyan-400 to-orange-400 rounded-full py-3 px-4  hover:opacity-80'>
-                Sort By
-          </button>      
-          </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Filter Results</DialogTitle>
-          <DialogDescription>
+        <button className="bg-gradient-to-r from-cyan-400 to-orange-400 rounded-full py-3 px-4  hover:opacity-80">
+          Sort By
+        </button>
+      </DialogTrigger>
+      <form className="space-y-4" 
+      // onSubmit={filterPriceRange}
+      >
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Filter Results</DialogTitle>
+            <DialogDescription>
               Sort Products based on price and price range
-         </DialogDescription>
-        </DialogHeader>
-        <div className="flex items-center space-x-2 ">
-          <div className="grid flex-1 gap-2">
-            <Label htmlFor="link" className="sr-only">
-            Min:
-            </Label>
-             <input placeholder="Min price.." className="border-2 p-2  text-neutral-700 text-sm rounded-xl focus:outline-none focus-within:outline-double"/>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex items-center space-x-2 ">
+            <div className="grid flex-1 gap-2">
+              <Label htmlFor="link" className="sr-only">
+                Min:
+              </Label>
+              <input
+                placeholder="Min price.."
             
+                className="border-2 p-2  text-neutral-700 text-sm rounded-xl focus:outline-none focus-within:outline-double"
+              />
+            </div>
           </div>
-          
-        </div>
 
-        <div className="flex items-center space-x-2 ">
-          <div className="grid flex-1 gap-2">
-            <Label htmlFor="link" className="sr-only">
-            Min:
-            </Label>
-             <input placeholder="Max price.." className="border-2 p-2  text-neutral-700 text-sm rounded-xl focus:outline-none focus-within:outline-double"/>
-            
+          <div className="flex items-center space-x-2 ">
+            <div className="grid flex-1 gap-2">
+              <Label htmlFor="link" className="sr-only">
+                Max:
+              </Label>
+              <input
+                placeholder="Max price.."
+                className="border-2 p-2  text-neutral-700 text-sm rounded-xl focus:outline-none focus-within:outline-double"
+              />
+            </div>
           </div>
-          
-        </div>
 
-
-        <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <Button type="button" variant="custom">
-             Save
-            </Button>
-          </DialogClose>
-        </DialogFooter>
-      </DialogContent>
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>
+              <button type="submit" variant="custom">
+                Save
+              </button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </form>
     </Dialog>
-
-  )
+  );
 }
