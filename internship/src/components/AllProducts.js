@@ -15,21 +15,23 @@ const AllProducts = ({ loading, allproducts}) => {
         <div className="text-center font-semibold text-lg">
           Showing products from all categories
         </div>
-        <div className="flex justify-center container w-[90vw] flex-wrap">
-          {loading && (
-            <div className="animate-spin w-[100px] h-[100px] rounded-full border-4 border-t-orange-600"></div>
-          )}
-          {allproducts.map(product => (
-            <div key={product.id} className="m-4 p-4 border flex flex-col justify-between border-gray-300 rounded-xl h-[200px] hover:opacity-70 cursor-pointer hover:bg-white hover:text-black">
-              <h2 className="text-xl font-semibold uppercase">{product.name}</h2>
-              <div>
-                <p className="text-cyan-600">Current Price: <span className="text-orange-500">${product.price}</span> </p>
-                <p className="">Stock Remaining: <span className=" text-cyan-600">{product.category}</span></p>
-              </div>
-               <Button type="submit" variant="custom">Add to cart</Button>
+        <div className="grid grid-cols-3 justify-center container w-[90vw]  ">
+        {loading && (
+          <div className="animate-spin w-[100px] h-[100px] rounded-full border-4 border-t-orange-600"></div>
+        )}
+        {allproducts.map(product => (
+          <div key={product.id} c className="m-4 p-4 border flex flex-col justify-between border-gray-300 rounded-xl hover:opacity-70 cursor-pointer hover:bg-white hover:text-black">
+            <img src={product.image} width={100}></img>
+            <h2 className=" font-semibold uppercase">{product.title}</h2>
+            <div>
+               <p className="">Current Price: <span className="text-orange-500">${product.price}</span> </p>
+                <p className="">Category: <span className="text-cyan-600">{product.category}</span></p>
+              
             </div>
-          ))}
-        </div>
+            <Button type="submit" variant="custom">Add to cart</Button>
+          </div>
+        ))}
+      </div>
       </div>
     </section>
   );
