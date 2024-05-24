@@ -49,9 +49,9 @@ export default function AddProducts() {
     <div className="space-y-8">
       <Navbar />
       <h1 className="text-xl font-bold mx-10">ADD NEW PRODUCT</h1>
-      <form onSubmit={handleSubmit} className="w-[40vw] space-y-8 mx-10 p-5 rounded-xl border-2 shadow-lg bg-slate-200 dark:bg-transparent dark:border-orange-400">
+      <form onSubmit={handleSubmit} className="  w-[80vw] md:w-[60vw] lg:w-[40vw] space-y-8 mx-10 p-5 rounded-xl border-2 shadow-lg bg-slate-200 dark:bg-transparent dark:border-orange-400">
         <div className="space-x-5">
-          <label htmlFor='name'>Product Name</label>
+          <label htmlFor='name' className="text-xs xs:text-sm md:text-md">Product Name</label>
           <input
             className="w-[60%] rounded-xl h-[35px] text-gray-400 px-5"
             placeholder="Sneakers..."
@@ -61,7 +61,7 @@ export default function AddProducts() {
             <p>{productName}</p>
                   </div>
         <div className="space-x-8">
-          <label htmlFor='price'>Product Price</label>
+          <label htmlFor='price' className="text-xs xs:text-sm md:text-md">Product Price</label>
           <input
             className="w-[60%] rounded-xl h-[35px] text-gray-400 px-5"
             placeholder="Price..."
@@ -70,7 +70,7 @@ export default function AddProducts() {
           />
         </div>
         <div className="space-x-3">
-          <label htmlFor='quantity'>Product Quantity</label>
+          <label htmlFor='quantity' className="text-xs xs:text-sm md:text-md">Product Quantity</label>
           <input
             className="w-[60%] rounded-xl h-[35px] text-gray-400 px-5"
             placeholder="Quantity..."

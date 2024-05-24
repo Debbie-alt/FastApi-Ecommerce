@@ -32,7 +32,7 @@ const AllProducts = ({ loading, allproducts}) => {
           </div>
         ))}
       </div>
-      </div>
+      </div>  
     </section>
   );
 };

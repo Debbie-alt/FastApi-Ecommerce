@@ -1,4 +1,30 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+.shop-hero{
+  width: 50vw;
+}
   
+@media (max-width:460px) {
+  .shop-hero{
+    width: 80vw;
+    text-align: center;
+   
+  }
+  .searchbar{
+    display:none;
+  }
+  
+}
+@media (max-width: 400px) {
+  .hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero-image{
+    width: 70vw;
+    margin-top: 20px;
+  }
+}

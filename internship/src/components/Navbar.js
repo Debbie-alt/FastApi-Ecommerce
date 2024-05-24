@@ -14,19 +14,19 @@ import {
 const Navbar = () => {
   return (
     <nav className="w-screen container flex justify-between items-center  border-b-2 border-b-slate-300 py-2">
-      <div className="flex space-x-5 items-center">
+      <div className="flex space-x-2  sm:space-x-5 items-center">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[40px] md:w-[55px] dark:invert"
           src="/modamartlogo.png"
           alt="Modamart Logo"
           width={55}
           height={37}
           
         />
-        <h1 className="font-semibold text-xl text-cyan-800">ModaMart</h1>
+        <h1 className="font-semibold  text-lg md:text-xl text-cyan-800">ModaMart</h1>
       </div>
 
-      <div className="relative flex">
+      <div className="relative flex searchbar">
         <Input />
         <div className="absolute  right-6  flex inset-y-0 items-center text-gray-600">
           <BsSearch />
@@ -46,18 +46,23 @@ const Navbar = () => {
              </ul>
            </HoverCardContent>
         </HoverCard>
+        
+        
+        <div className="hidden lg:flex md:gap-3 items-center  text-sm lg:text-md">
 
-        <Link href="/" className="hover:text-cyan-600">
-          Home
-        </Link>
-        <Link href="/addproduct" className="hover:text-cyan-600">
-          Add Products
-        </Link>
-        <FaCartShopping role="button" />
-        <Link href="/_cart" className="hover:text-cyan-600">
-          Cart
-        </Link>
-        <ModeToggle />
+          <Link href="/" className="hover:text-cyan-600">
+            Home
+          </Link>
+          <Link href="/addproduct" className="hover:text-cyan-600">
+            Add Products
+          </Link>
+          <FaCartShopping role="button" />
+          <Link href="/_cart" className="hover:text-cyan-600">
+            Cart
+          </Link>
+          <ModeToggle />
+        </div>
+
       </div>
     </nav>
   );
