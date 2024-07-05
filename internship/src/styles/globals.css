@@ -5,6 +5,12 @@
 .shop-hero{
   width: 50vw;
 }
+main{
+  background-color: #1a1a1a;
+}
+nav{
+  background-color: #1a1a1a;
+}
   
 @media (max-width:460px) {
   .shop-hero{

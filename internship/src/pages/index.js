@@ -36,7 +36,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={`flex min-h-screen flex-col ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col ${inter.className} `}>
       <Head>
         <title>Modamart</title>
         <meta name="keywords" content="shop, e-commerce, cart order, product"></meta>

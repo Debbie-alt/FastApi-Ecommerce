@@ -4,60 +4,36 @@ import { FaCartShopping } from "react-icons/fa6";
 import { BsSearch } from "react-icons/bs";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggler";
-import { FaGlobe } from "react-icons/fa";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 
 const Navbar = () => {
   return (
-    <nav className="w-screen container flex justify-between items-center  border-b-2 border-b-slate-300 py-2">
+    <nav className="w-screen container flex justify-between items-center py-2  text-pretty text-white">
       <div className="flex space-x-2  sm:space-x-5 items-center">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[40px] md:w-[55px] dark:invert"
-          src="/modamartlogo.png"
+          src="/mirageban-modified.png"
           alt="Modamart Logo"
           width={55}
           height={37}
           
         />
-        <h1 className="font-semibold  text-lg md:text-xl text-cyan-800">ModaMart</h1>
+        <h1 className="font-semibold  text-lg md:text-xl font-serif italic">The Mirage <sub><small>Shop</small></sub></h1>
       </div>
+       
 
-      <div className="relative flex searchbar">
-        <Input />
-        <div className="absolute  right-6  flex inset-y-0 items-center text-gray-600">
-          <BsSearch />
-        </div>
-      </div>
+      <div className="flex space-x-5 items-center ">    
+      <BsSearch className="text-sm " />
 
-      <div className="flex space-x-5 items-center ">
-        <HoverCard>
-          <HoverCardTrigger>
-            {" "}
-            <FaGlobe className="text-cyan-500 text-lg cursor-pointer" />
-          </HoverCardTrigger>
-          <HoverCardContent>
-             <ul>
-               <li>English</li>
-               <li>Spanish</li>
-             </ul>
-           </HoverCardContent>
-        </HoverCard>
-        
-        
         <div className="hidden lg:flex md:gap-3 items-center  text-sm lg:text-md">
 
-          <Link href="/" className="hover:text-cyan-600">
+          <Link href="/" className="hover:text-red-400">
             Home
           </Link>
-          <Link href="/addproduct" className="hover:text-cyan-600">
-            Add Products
+          <Link href="/login" className="hover:text-red-400">
+           Login
           </Link>
           <FaCartShopping role="button" />
-          <Link href="/_cart" className="hover:text-cyan-600">
+          <Link href="/_cart" className="hover:text-red-400">
             Cart
           </Link>
           <ModeToggle />

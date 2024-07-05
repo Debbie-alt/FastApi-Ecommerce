@@ -5,7 +5,7 @@ const AllProducts = ({ loading, allproducts}) => {
 
   // console.log("Rendered products:", produce); 
   return (
-    <section>
+    <section className="bg-white">
       <figure className='w-screen container flex items-center justify-between p-10'>
         <div className='w-[60%] bg-red-500 flex justify-between items-center'>
         </div>
